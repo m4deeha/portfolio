@@ -1,0 +1,78 @@
+.projects {
+  animation: fadeIn 4s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+  .project-item {
+    flex: 0 0 30%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: left;
+    box-shadow: 0 40px 80px rgb(242, 85, 7);
+    justify-content: space-around;
+  }
+  
+  .project-image {
+    text-align: left;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .project-title {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+
+.portfolio-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #0c0909;
+}
+
+.animated-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.about-section {
+  margin: 0px 0px 20px 0px;
+  text-align: start;
+  background-color: rgba(82, 61, 61, 0.3);
+  padding: 8px 80px;
+  
+}
+
+.about-section{
+  opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.about-section.visible {
+  opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
